@@ -84,9 +84,12 @@ Post ──N:M──> Bilag (via PostBilag)
 | Role | Poster | Udbud | ATR & Bemanding | Bilag | Admin |
 |------|--------|-------|-----------------|-------|-------|
 | Læser | Read | — | — | — | — |
+| Xbruger (ekstern) | — | — | Own (view/edit) | — | — |
 | Bruger | — | Own | Own | — | — |
 | Projektleder | — | All active | All | — | — |
 | Administrator | Full | Full | Full | Full | Full |
+ 
+Poster and Bilag are **admin-only** sections. Bruger, Xbruger and Projektleder cannot access them. **Xbruger** is a new role for external consultants with ATR access (Feature #16).
  
 Poster and Bilag are **admin-only** sections. Bruger and Projektleder cannot access them.
  
