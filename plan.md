@@ -50,11 +50,6 @@ Phase 0 → Phase 1 → Phase 2 ─┬─→ Phase 3 (parallel)
 | Grouped ATR table | ATRs grouped by Udbud with expand/collapse, many action columns | Custom SPFx React grid — no OOTB solution; plan for virtualized rendering |
 | SharePoint list thresholds | 5000-item threshold on large lists | Index key columns (UdbudId, FagpostId, Status); filter by year/project |
 | Rich text editor consistency | Basistekst editing must preserve formatting across save/load cycles | Use SPFx RichText control or TinyMCE; sanitize HTML on save |
- 
-## Execution Tracking
- 
-See `implementation-spec.md` for the live build order, status table, acceptance criteria, and blockers.
-
 
 ## New Features (from Banebyg_Nye funktioner (2).xlsx)
  
@@ -109,3 +104,11 @@ Features prioriteret efter Rating (1 = højest, 5 = lavest, 0 = ej relevant).
 |----|---------|----------|---------------|
 | 10 | ATR | Bilag: Tilpas bilag-titel | Phase 6 (6B) |
 | 19 | ATR | Bilag 1: Nedbrud af timeforbrug — korrekt rækkefølge/nummerering | Phase 6 (6C) |
+
+ 
+## Execution Tracking
+ 
+See `implementation-spec.md` for the live build order, status table, acceptance criteria, and blockers.
+
+
+
