@@ -19,26 +19,32 @@
 | 2B | TypeScript models — BBTR (ATR, ATRInfo, ATRSkema, ATRKategori, Fase, Medarbejderkategori) | TODO | — | — |
 | 2C | SP service layer (PnPjs CRUD operations, batching, error handling) | TODO | — | — |
 | 2D | Navigation component (tabs: Poster, Udbud, ATR & Bemanding, Bilag + right-side admin/feedback links) | TODO | — | — |
-| 3A | Poster tree component (hierarchical, expandable, search, "Søg kun i postnr./titel" checkbox) | TODO | — | — |
-| 3B | Post editor (right panel: Aktiv/Udgået toggle, PostType dropdown, Nr/Navn fields, rich text, bilag section, ATR-skema checkbox, Inkludér per default checkbox) | TODO | — | — |
+| 3A | Poster tree component (hierarchical, expandable, search, "Søg kun i postnr./titel" checkbox) + **drag & drop rækkefølge** (Feature #5) | TODO | — | — |
+| 3B | Post editor (right panel: Aktiv/Udgået toggle, PostType dropdown, Nr/Navn fields, rich text, bilag section, ATR-skema checkbox, Inkludér per default checkbox) + **postnr. kontrol** (Feature #1) + **udvidede skrifttyper/afsnittyper** (Feature #2) | TODO | — | — |
 | 3C | Create post modal (PostType, Fagpost/Hovedpost lookups, initial fields) | TODO | — | — |
-| 4A | Bilag list component (search, table: Id, Navn, Version, Aktiv, Relaterede poster, actions) | TODO | — | — |
+| 3D | **Admin sletning af poster** — permanent slet for admin-rolle (Feature #3) | TODO | — | — |
+| 4A | Bilag list component (search, table: Id, Navn, Version, Aktiv, Relaterede poster, actions) + **admin slettefunktion** (Feature #22) | TODO | — | — |
 | 4B | Bilag create/edit modal + file upload to BilagFiler library | TODO | — | — |
-| 5A | Udbud list component (table with filters: Projektnr, Projektnavn, Revision, Status, Version, actions) | TODO | — | — |
+| 4C | **Automatisk dokumentfortegnelse** — auto-genereret dokument-/tegningsfortegnelse fra valgte bilag (Feature #20) | TODO | — | — |
+| 5A | Udbud list component (table with filters: Projektnr, Projektnavn, Revision, Status, Version, actions) + **admin slettefunktion** (Feature #8) | TODO | — | — |
 | 5B | Udbud create/edit modal (Projektnr*, Projektnavn*, Offentliggørelsesdato*, Status*, Fase*, Link til projekt site, descriptions) | TODO | — | — |
-| 5C | Udbud poster editor (two-column: basistekst left, udbudsspecifik kommentar right; checkbox per post; bilag per post) | TODO | — | — |
+| 5C | Udbud poster editor (two-column: basistekst left, udbudsspecifik kommentar right; checkbox per post; bilag per post) + **vejledende tekst/hjælpetekst** ved projektspecifikke felter (Feature #4) | TODO | — | — |
 | 5D | "Hent basistekst fra nyeste version" modal (version comparison, confirm overwrite) | TODO | — | — |
 | 6A | ATR list component (grouped per udbud, expand/collapse, filters: mine/alle, year, search) | TODO | — | — |
-| 6B | ATR Info modal (Udbudsform*, Ændringsydelse toggle, Loft, BDK Projektleder, Ledelsesrepræsentant, Godkendt af, Rådgiver repræsentant, Eksterne rådgivere) | TODO | — | — |
-| 6C | ATR-skema editor (full page: warning banner if dates missing, Overordnet beskrivelse, Omfang af ydelsen, Ressourcer, dynamic categories repeater with "+ Tilføj kategori", Tilbage button) | TODO | — | — |
+| 6B | ATR Info modal (Udbudsform*, Ændringsydelse toggle, Loft, BDK Projektleder, Ledelsesrepræsentant, Godkendt af, Rådgiver repræsentant, Eksterne rådgivere) + **tilpas bilag-titel** (Feature #10) + **Ændringsydelser: fjern fra hoved-ATR** (Feature #13) | TODO | — | — |
+| 6C | ATR-skema editor (full page: warning banner if dates missing, Overordnet beskrivelse, Omfang af ydelsen, Ressourcer, dynamic categories repeater with "+ Tilføj kategori", Tilbage button) + **admin-defineret fast ATR-tekst per fagpost** (Feature #9) + **rich text formatering** (Feature #11) + **hjælpetekst ikon** (Feature #12) + **korrekt rækkefølge/nummerering af Bilag 1** (Feature #19) | TODO | — | — |
 | 6D | ATR auto-generation logic (Power Automate flow: on Udbud creation, create ATR per included fagpost where ATRSkemaPåkrævet = true) | TODO | — | — |
+| 6E | **Bemandingsplan tilpasning** — definér poster/aktiviteter (CSM, Dispensationer, Projektopfølgning, m.fl.) der skal estimeres timer for (Feature #15) | TODO | — | — |
 | 7A | Admin: Standard tekster (5 sections via dropdown: Hvis ikke andet, Vejledning, Tidsplan, Normal udbudsform, Omvendt udbudsform; rich text editor) | TODO | — | — |
 | 7B | Admin: Fase management (CRUD table: SorteringsNr, FaseNavn, FaseNr, Deaktiveret flag, Ændret af; inline edit) | TODO | — | — |
 | 7C | Admin: Medarbejderkategori management (CRUD table: KategoriNavn, Aktiv flag) | TODO | — | — |
-| 8A | Role-based access control (SP groups → SPFx permission checks, route guarding) | TODO | — | — |
+| 8A | Role-based access control (SP groups → SPFx permission checks, route guarding) + **Xbruger-rolle for eksterne konsulenter** med ATR adgang (Feature #16) | TODO | — | — |
 | 8B | Poster/Bilag admin-only restriction (hide tabs + server-side SP permissions) | TODO | — | — |
-| 9A | ATR preview document generation (Azure Function + Word template) | TODO | — | — |
-| 9B | Bemandingsplan document generation (Azure Function + Excel template) | TODO | — | — |
+| 9A | ATR preview document generation (Azure Function + **Word template**, nyt paradigme) + **ændringslog** (Feature #17) | TODO | — | — |
+| 9B | Bemandingsplan document generation (Azure Function + Excel template) + **ændringslog** (Feature #18) | TODO | — | — |
+| 9C | **Tillægs-ATR skabelon** — separat Word-skabelon for ændringsydelser i detailfasen (Feature #13 langsigtet) | TODO | — | — |
+| 9D | **Udtræk pr. fagposter/fagopdelt** — mulighed for fagopdelt udtræk fra udbud (Feature #7) | TODO | — | — |
+| 9E | **Selektivt udtræk ved rettelsesblad** — vælg/fravælg dokumenter og bilag i samlet udtræk efter v1.0 (Feature #25) | TODO | — | — |
 | 10A | End-to-end testing (all sections, all roles, edge cases) | TODO | — | — |
 | 10B | Deployment configuration (tenant-level app catalog, site provisioning) | TODO | — | — |
  
@@ -63,38 +69,44 @@
 - **2D:** Navigation renders 4 tabs (3 if `IS_BBTR=false`); active tab highlighted; right-side links functional
  
 ### Phase 3 — Poster Section
-- **3A:** Tree shows 25 root posts with correct hierarchy; expand/collapse works; search filters by postnr/title
-- **3B:** Selecting a post loads editor; all fields editable; save persists to SP list; Aktiv/Udgået toggle updates status
+- **3A:** Tree shows 25 root posts with correct hierarchy; expand/collapse works; search filters by postnr/title; **drag & drop reorders posts and persists new SorteringsNr** (Feature #5)
+- **3B:** Selecting a post loads editor; all fields editable; save persists to SP list; Aktiv/Udgået toggle updates status; **postnr. kan styres manuelt af admin** (Feature #1); **rich text editor inkluderer nødvendige skrifttyper og afsnittyper** (Feature #2)
 - **3C:** Modal creates new post with correct PostType; appears in tree after save
+- - **3D:** Admin kan permanent slette poster; bekræftelsesdialog forhindrer utilsigtet sletning; relaterede data håndteres korrekt (Feature #3)
  
 ### Phase 4 — Bilag Section
-- **4A:** Table shows all bilag with correct columns; search works; Relaterede poster shows linked posts
+- **4A:** Table shows all bilag with correct columns; search works; Relaterede poster shows linked posts; **admin kan permanent slette bilag med bekræftelsesdialog** (Feature #22)
 - **4B:** Modal creates bilag with file upload; edit updates metadata; file stored in BilagFiler library
+- - **4C:** Automatisk dokumentfortegnelse genereres fra valgte bilag via foruddefineret skabelon; kan projekttilpasses (Feature #20)
  
 ### Phase 5 — Udbud Section
-- **5A:** Table shows all tenders with correct columns; filters by status/year
+- **5A:** Table shows all tenders with correct columns; filters by status/year; **admin kan permanent slette fejloprettede udbud med bekræftelsesdialog** (Feature #8)
 - **5B:** Modal creates/edits udbud; Fase dropdown populated from BBTR_Faser; all required fields validated
-- **5C:** Two-column editor: basistekst (read-only from post) on left, udbudsspecifik kommentar (editable) on right; checkboxes toggle post inclusion; bilag attachable per post
+- **5C:** Two-column editor: basistekst (read-only from post) on left, udbudsspecifik kommentar (editable) on right; checkboxes toggle post inclusion; bilag attachable per post; **vejledende tekst (tooltip/inline) vises ved projektspecifikke tekstfelter** (Feature #4)
 - **5D:** Modal shows version diff; confirms overwrite; updates basistekst to latest version
  
 ### Phase 6 — ATR & Bemanding
 - **6A:** ATRs grouped by udbud; expand shows ATRs for that udbud; filters (mine/alle, year, search) work
-- **6B:** Modal loads ATR metadata; all fields editable; person fields resolve against Azure AD
-- **6C:** Full-page editor with all fields; categories repeater adds/removes rows; Tilbage navigates back
+- **6B:** Modal loads ATR metadata; all fields editable; person fields resolve against Azure AD; **bilag-titel kan tilpasses** (Feature #10); **ændringsydelse toggle fjernet fra hoved-ATR** (Feature #13)
+- **6C:** Full-page editor with all fields; categories repeater adds/removes rows; Tilbage navigates back; **admin-defineret fast ATR-tekst per fagpost vises som udgangspunkt** (Feature #9); **rich text formatering med nødvendige skrifttyper** (Feature #11); **hjælpetekst ikon ved relevante felter** (Feature #12); **Bilag 1 nedbrud vises i korrekt nummerering jf. afsnit** (Feature #19)
 - **6D:** Creating a new udbud auto-generates ATR records for each selected fagpost with ATRSkemaPåkrævet=true
- 
+ - **6E:** Admin kan definere/tilpasse poster og aktiviteter i bemandingsplanen (CSM, Dispensationer, Projektopfølgning m.fl.); tilpasninger slår igennem i udtræk (Feature #15)
+
 ### Phase 7 — Admin Section
 - **7A:** Dropdown selects section; rich text editor loads/saves content per section
 - **7B:** Table shows all phases; inline edit for name/number; deactivation hides from Udbud Fase dropdown
 - **7C:** Table shows all categories; add/edit/deactivate; used categories cannot be deleted
  
 ### Phase 8 — Roles & Permissions
-- **8A:** SP groups (Administrator, Projektleder, Bruger, Læser) map to correct permissions; unauthorized actions blocked
+- **8A:** SP groups (Administrator, Projektleder, Bruger, Læser, **Xbruger**) map to correct permissions; unauthorized actions blocked; **Xbruger (eksterne konsulenter) har adgang til ATR visning/redigering** (Feature #16)
 - **8B:** Non-admin users cannot see Poster/Bilag tabs; direct URL access returns 403/redirect
  
 ### Phase 9 — Document Generation
-| 9A | ATR preview document generation (Azure Function + **Word template**, nyt paradigme) + **ændringslog** (Feature #17) | TODO | — | — |
-| 9B | Bemandingsplan document generation (Azure Function + Excel template) + **ændringslog** (Feature #18) | TODO | — | — |
+- **9A:** "Preview ATR" button generates **Word** document (nyt paradigme) med correct ATR data + **ændringslog**; opens in browser (Feature #17)
+- **9B:** "Preview Bemandingsplan" generates Excel with categories and hours + **ændringslog**; opens in browser (Feature #18)
+- **9C:** Tillægs-ATR skabelon for ændringsydelser genereres som separat Word-dokument (Feature #13 langsigtet)
+- **9D:** Fagopdelt udtræk — mulighed for at udtrække pr. fagpost eller fagopdelt (Feature #7)
+- **9E:** Selektivt udtræk ved rettelsesblad — bruger kan tilvælge/fravælge dokumenter og bilag i samlet udtræk efter v1.0 (Feature #25)
 | 9C | **Tillægs-ATR skabelon** — separat Word-skabelon for ændringsydelser i detailfasen (Feature #13 langsigtet) | TODO | — | — |
 | 9D | **Udtræk pr. fagposter/fagopdelt** — mulighed for fagopdelt udtræk fra udbud (Feature #7) | TODO | — | — |
 | 9E | **Selektivt udtræk ved rettelsesblad** — vælg/fravælg dokumenter og bilag i samlet udtræk efter v1.0 (Feature #25) | TODO | — | — |
