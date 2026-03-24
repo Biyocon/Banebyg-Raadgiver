@@ -93,8 +93,11 @@
 - **8B:** Non-admin users cannot see Poster/Bilag tabs; direct URL access returns 403/redirect
  
 ### Phase 9 — Document Generation
-- **9A:** "Preview ATR" button generates Word document with correct ATR data; opens in browser
-- **9B:** "Preview Bemandingsplan" generates Excel with categories and hours; opens in browser
+| 9A | ATR preview document generation (Azure Function + **Word template**, nyt paradigme) + **ændringslog** (Feature #17) | TODO | — | — |
+| 9B | Bemandingsplan document generation (Azure Function + Excel template) + **ændringslog** (Feature #18) | TODO | — | — |
+| 9C | **Tillægs-ATR skabelon** — separat Word-skabelon for ændringsydelser i detailfasen (Feature #13 langsigtet) | TODO | — | — |
+| 9D | **Udtræk pr. fagposter/fagopdelt** — mulighed for fagopdelt udtræk fra udbud (Feature #7) | TODO | — | — |
+| 9E | **Selektivt udtræk ved rettelsesblad** — vælg/fravælg dokumenter og bilag i samlet udtræk efter v1.0 (Feature #25) | TODO | — | — |
  
 ### Phase 10 — Testing & Deployment
 - **10A:** All user flows pass for all 4 roles; edge cases (empty states, max items, concurrent edits) handled
