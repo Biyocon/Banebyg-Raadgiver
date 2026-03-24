@@ -8,7 +8,19 @@ BaneByg Teknisk Rådgivning (BBTR) — a SharePoint Online (SPFx + React) applic
 
 BBTR is a **superset of BaneByg Entreprise (BBE)**. Everything in BBE exists in BBTR, plus the ATR & Bemanding module. The two should share a single SPFx solution with feature flags (`IS_BBTR`).
 
-## Key Documents
+## Documentation Structure
+ 
+| File | Purpose | Authority |
+|------|---------|-----------|
+| `.claude-memory.md` | Locked product/technical decisions, current state and direction | Project context |
+| `CLAUDE.md` | Working rules, architecture, repo contracts | Code conventions |
+| `plan.md` | Strategic roadmap — phases, dependencies, risks | Strategic planning |
+| `implementation-spec.md` | **Execution source of truth** — build order, status, acceptance criteria, blockers | Operational |
+| `primer.md` | Onboarding — business context, domain terms, technical architecture | Reference |
+ 
+**`implementation-spec.md` is the live execution board.** Update its status table when steps change from TODO → IN PROGRESS → DONE. Write completed date and verification notes. Keep blockers and next-up current.
+ 
+## Reference Documents
 
 - `PRD_BBTR_BaneByg_Raadgiver.md` — Full PRD generated from video analysis (primary spec)
 - `PRD_BaneByg_Teknisk_Raadgivning_SharePoint-kloning.md` — SharePoint cloning PRD with implementation details
@@ -59,3 +71,15 @@ banebyg-spfx/
 ## Language
 
 All UI text, field names, and documentation are in **Danish**. Use Danish for user-facing strings and comments in code.
+ 
+## Development Commands
+ 
+_No source code yet. Commands will be added when the SPFx project is scaffolded (Step 0A)._
+ 
+```bash
+# Planned (after scaffold):
+# gulp serve              — Local dev server with SP workbench
+# gulp build              — Production build
+# gulp bundle --ship      — Bundle for deployment
+# gulp package-solution --ship  — Create .sppkg for app catalog
+```
